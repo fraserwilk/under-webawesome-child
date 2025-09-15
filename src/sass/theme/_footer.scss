@@ -1,0 +1,16 @@
+#colophon.site-footer {
+    max-width: fit-content;
+    margin-inline: auto;
+
+    a {
+        color: $white;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $primary;
+            text-decoration:underline;
+        }
+    }
+}

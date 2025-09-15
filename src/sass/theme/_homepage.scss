@@ -1,0 +1,67 @@
+
+#hero {
+    padding: 6rem 0;
+    p {
+        color: $light;
+        text-align: left;
+    }
+
+    p.hero-title {
+        width: 80%;
+        font-size: clamp(2rem, 1.2841rem + 3.1818vw, 3.75rem);
+        font-weight: 900;
+        line-height: clamp(2rem, 0.9773rem + 4.5455vw, 4.5rem);
+    }
+
+    p.hero-content {
+        width: 80%;
+        font-size: clamp(1.125rem, 0.767rem + 1.5909vw, 2rem);
+        // text-align:left;
+        text-wrap: balance;
+        // padding: 0 6rem;
+    }
+
+    .hero-buttons {
+        padding-top: 4rem;
+    }
+}
+
+
+#services {
+    padding: 6rem 0;
+
+    h2 {
+        color: $primary;
+        font-weight: 600;
+    }
+
+    .card-section {
+        padding-top: 3rem;
+    }
+
+    .card {
+        border: solid 1px $gray-400;
+        background: $gray-300;;
+        padding: 1rem;
+
+        .card-img-top {
+            color: $primary;
+            stroke: $primary;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: $gray-700;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+#cta {
+    padding: 1rem 0;
+
+    &.has-checked-background {
+            // from https://patterncraft.fun/
+            min-height: 20vh;
+            min-width: 100%;
+            background: #0f172a;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                background: #162038;
+                background-image:
+                    radial-gradient(circle, rgba(139,92,246,0.6) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(59,130,246,0.4) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(236,72,153,0.5) 1px, transparent 1px);
+                background-size: 20px 20px, 40px 40px, 60px 60px;
+                background-position: 0 0, 10px 10px, 30px 30px;
+                pointer-events: none;
+            }
+    }
+
+    h2, p, div {
+        position: relative;
+        color: $light;
+        padding-top: clamp(0.8rem, 0.9773rem + 2.5455vw, 2rem);
+    }
+
+    h2 {
+        font-weight: 600;
+    }
+
+    p {
+        margin-inline: auto;
+        line-height: clamp(0.8rem, 0.9773rem + 2.5455vw, 2rem);
+    }
+}

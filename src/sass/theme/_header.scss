@@ -1,0 +1,14 @@
+img.custom-logo {
+    border-radius: 0;
+    margin-right: 1rem;
+}
+
+
+#main-menu li a {
+    color: $dark;
+
+    &:hover, &:active {
+        color: $primary;
+        background-color: $gray-300;
+    }
+}
