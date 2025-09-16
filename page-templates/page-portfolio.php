@@ -50,26 +50,26 @@ get_header(); ?>
                                     </div>
                                 <?php endif; ?>
 
-                                <div class="name">
+                                <div class="content">
                                     <?php // Title (Text Field) ?>
                                     <?php if ( ! empty( $item['title'] ) ) : ?>
-                                        <h2 class="card-title"><?php echo esc_html( $item['title'] ); ?></h2>
+                                        <h2 class="title"><?php echo esc_html( $item['title'] ); ?></h2>
                                     <?php endif; ?>
 
                                     <?php // Sub Title (Text Field) ?>
                                     <?php if ( ! empty( $item['sub_title'] ) ) : ?>
-                                        <h3 class="position"><?php echo esc_html( $item['sub_title'] ); ?></h3>
+                                        <h3 class="subtitle"><?php echo esc_html( $item['sub_title'] ); ?></h3>
                                     <?php endif; ?>
                                     
                                     <?php // Summary (Text Area Field) ?>
                                     <?php if ( ! empty( $item['summary'] ) ) : ?>
-                                        <p class="card-text">
+                                        <p>
                                             <?php echo wpautop( esc_textarea( $item['summary'] ) ); ?>
                                         </p>
                                     <?php endif; ?>
                                 </div>
 
-                                <div class="card-body">
+                                <div class="subgrid">
                                     <?php // Launch Date (Date Picker Field) ?>
                                     <?php if ( ! empty( $item['launch_date'] ) ) :
                                         $date_object = DateTime::createFromFormat('d/m/Y', $item['launch_date']);

@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md bg-light" aria-labelledby="main-nav-label" data-bs-theme="light">
+<nav id="main-nav" class="navbar navbar-expand-md bg-light border-bottom py-3" aria-labelledby="main-nav-label" data-bs-theme="light">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -51,8 +51,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		);
 		?>
 
-		<div class="d-flex ps-5">
-			<button class="btn btn-primary" type="submit">Hire Me</button>
+		<div class="d-flex align-items-center ps-5">
+			<a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary" role="button"><?php esc_html_e( 'Hire Me', 'understrap-child' ); ?></a>
 		</div>
 
 	</div><!-- .container(-fluid) -->
