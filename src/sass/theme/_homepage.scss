@@ -1,24 +1,31 @@
 
 #hero {
-    padding: 6rem 0;
+    padding: 8rem 0;
     p {
         color: $light;
         text-align: left;
     }
 
-    p.hero-title {
+    h1.hero-title {
         width: 80%;
         font-size: clamp(2rem, 1.2841rem + 3.1818vw, 3.75rem);
         font-weight: 900;
         line-height: clamp(2rem, 0.9773rem + 4.5455vw, 4.5rem);
+        color: $light;
+        text-wrap: balance;
+        // text-align: left;
     }
 
     p.hero-content {
-        width: 80%;
+        width: 100%;
         font-size: clamp(1.125rem, 0.767rem + 1.5909vw, 2rem);
-        // text-align:left;
         text-wrap: balance;
-        // padding: 0 6rem;
+    }
+
+    @media (min-width: 48em) {
+        p.hero-content {
+        width: 80%;
+    }
     }
 
     .hero-buttons {
@@ -36,13 +43,18 @@
     }
 
     .card-section {
-        padding-top: 3rem;
+        margin-inline: auto;
+        width: min(95%, 70rem);
+        padding: 3rem;
+        gap: 3rem;
     }
 
     .card {
-        border: solid 1px $gray-400;
-        background: $gray-300;;
-        padding: 1rem;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        border: solid 1px $gray-200;
+        box-shadow: 2.5rem 3.75rem 3rem -3rem $gray-400;
+        background-color: $gray-100;
 
         .card-img-top {
             color: $primary;

@@ -42,50 +42,49 @@ get_header(); ?>
                             ?>
                             <div class="testimonial flow bg-grey-100 bg-opacity-25">
 
-                                <?php // Screenshot (Image Field) ?>
-                                <?php if ( ! empty( $item['image'] ) ) :
-                                    $screenshot = $item['image']; ?>
-                                    <div class="card-image-top">
-                                        <img class="border-primary-400" src="<?php echo esc_url( $screenshot['url'] ); ?>" alt="<?php echo esc_attr( $screenshot['alt'] ); ?>" />
+                                    <?php // Screenshot (Image Field) ?>
+                                    <?php if ( ! empty( $item['image'] ) ) :
+                                        $screenshot = $item['image']; ?>
+                                        <div class="card-image-top">
+                                            <img class="border-primary-400" src="<?php echo esc_url( $screenshot['url'] ); ?>" alt="<?php echo esc_attr( $screenshot['alt'] ); ?>" />
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <div class="content">
+                                        <?php // Title (Text Field) ?>
+                                        <?php if ( ! empty( $item['title'] ) ) : ?>
+                                            <h2 class="title"><?php echo esc_html( $item['title'] ); ?></h2>
+                                        <?php endif; ?>
+
+                                        <?php // Sub Title (Text Field) ?>
+                                        <?php if ( ! empty( $item['sub_title'] ) ) : ?>
+                                            <h3 class="subtitle"><?php echo esc_html( $item['sub_title'] ); ?></h3>
+                                        <?php endif; ?>
+                                        
+                                        <?php // Summary (Text Area Field) ?>
+                                        <?php if ( ! empty( $item['summary'] ) ) : ?>
+                                            <p>
+                                                <?php echo wpautop( esc_textarea( $item['summary'] ) ); ?>
+                                            </p>
+                                        <?php endif; ?>
                                     </div>
-                                <?php endif; ?>
 
-                                <div class="content">
-                                    <?php // Title (Text Field) ?>
-                                    <?php if ( ! empty( $item['title'] ) ) : ?>
-                                        <h2 class="title"><?php echo esc_html( $item['title'] ); ?></h2>
-                                    <?php endif; ?>
-
-                                    <?php // Sub Title (Text Field) ?>
-                                    <?php if ( ! empty( $item['sub_title'] ) ) : ?>
-                                        <h3 class="subtitle"><?php echo esc_html( $item['sub_title'] ); ?></h3>
-                                    <?php endif; ?>
-                                    
-                                    <?php // Summary (Text Area Field) ?>
-                                    <?php if ( ! empty( $item['summary'] ) ) : ?>
-                                        <p>
-                                            <?php echo wpautop( esc_textarea( $item['summary'] ) ); ?>
-                                        </p>
-                                    <?php endif; ?>
-                                </div>
-
-                                <div class="subgrid">
-                                    <?php // Launch Date (Date Picker Field) ?>
-                                    <?php if ( ! empty( $item['launch_date'] ) ) :
-                                        $date_object = DateTime::createFromFormat('d/m/Y', $item['launch_date']);
-                                        if ($date_object) { ?>
-                                            <span class="card-date">
-                                                Launched: <?php echo $date_object->format('F Y'); ?>
-                                            </span>
-                                        <?php }
-                                    endif; ?>
-                                    
-                                    <?php // Website Link (URL Field) ?>
-                                    <?php if ( ! empty( $item['website_link'] ) ) : ?>
-                                        <a class="card-link" href="<?php echo esc_url( $item['website_link'] ); ?>" target="_blank" rel="noopener noreferrer">Visit Site</a>
-                                    <?php endif; ?>
-                                </div>
-
+                                    <div class="footer">
+                                        <?php // Launch Date (Date Picker Field) ?>
+                                        <?php if ( ! empty( $item['launch_date'] ) ) :
+                                            $date_object = DateTime::createFromFormat('d/m/Y', $item['launch_date']);
+                                            if ($date_object) { ?>
+                                                <span class="card-date">
+                                                    Launched: <?php echo $date_object->format('F Y'); ?>
+                                                </span>
+                                            <?php }
+                                        endif; ?>
+                                        
+                                        <?php // Website Link (URL Field) ?>
+                                        <?php if ( ! empty( $item['website_link'] ) ) : ?>
+                                            <a class="card-link" href="<?php echo esc_url( $item['website_link'] ); ?>" target="_blank" rel="noopener noreferrer">Visit Site</a>
+                                        <?php endif; ?>
+                                    </div>
                             </div>
                             <?php
                                 endforeach; // End of the card loop

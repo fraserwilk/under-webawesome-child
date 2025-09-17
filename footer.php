@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info py-4 py-lg-5 container">
 
-						<p class="mb-0">© 2025 <a href="<?php get_site_url() ?>" target="_parent">TruWeb Development &amp; Design</a></p>
+						<p class="mb-0">© <?php echo date( 'Y' ); ?> <a href="<?php get_site_url() ?>" target="_parent">TruWeb Development &amp; Design</a></p>
 
 					</div><!-- .site-info -->
 
