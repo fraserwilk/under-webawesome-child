@@ -14524,6 +14524,10 @@ a.skip-link:not(:focus):not(:focus-within) {
   display: block;
 }
 
+#full-width-page-wrapper {
+  min-height: 80vh;
+}
+
 .figtree-normal {
   font-family: "Figtree", serif;
   font-optical-sizing: auto;
